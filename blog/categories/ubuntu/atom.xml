@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | LYFEYAJ]]></title>
   <link href="http://lyfeyaj.github.com/blog/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://lyfeyaj.github.com/blog/"/>
-  <updated>2012-03-28T13:14:13+08:00</updated>
+  <updated>2012-03-28T13:52:35+08:00</updated>
   <id>http://lyfeyaj.github.com/blog/</id>
   <author>
     <name><![CDATA[lyfeyaj]]></name>
@@ -145,7 +145,8 @@ rvm is a function
 curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer -o rvm-installer
 chmod +x rvm-installer
 ./rvm-installer --version latest
-usermod -a -G rvm root6 rm rvm-installer
+usermod -a -G rvm root
+rm rvm-installer
 </code></pre>
 
 <p>最后记得重新登入或者重启一下服务器, 使得 rvm 生效. 测试的话可以输入：</p>
