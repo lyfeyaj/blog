@@ -7,8 +7,8 @@
     <meta name="author" content="lyfeyaj">
 
     
-    <meta name="description" content="Ubuntu上搭建 Ruby on Rails 生产环境 注意事项: 机子必须可以链接到外网, 下面的安装操作需要走网络下载对应的安装包, 在国内可能会存在某些网络无法访问的情况, 需自行准备梯子.
-文章中的软件基于软件版本基于: ubuntu-11.10, rvm-1.11.2, ruby-1 &hellip;">
+    <meta name="description" content="Sublime Text 2 使用方法和问题小结 去年刚接触Ruby on Rails的时候编辑器是用的eclipse，并安装了RDT插件，但是总觉得用的不爽。无意中发现了 Sublime Text 编辑器，一段时间用下来，最大的感觉就是各种流畅！
+关于Sublime Text &hellip;">
     
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 
@@ -54,6 +54,161 @@
 </header>
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+    <h1 class="title"><a href="/blog/blog/2012/03/29/sublime-text-2shi-yong-fang-fa-he-wen-ti-xiao-jie/">Sublime Text 2 使用方法和问题小结</a></h1>
+    <div class="entry">
+        <p>去年刚接触Ruby on Rails的时候编辑器是用的eclipse，并安装了RDT插件，但是总觉得用的不爽。无意中发现了 <a href="http://www.sublimetext.com">Sublime Text</a> 编辑器，一段时间用下来，最大的感觉就是各种流畅！
+关于Sublime Text 的详细介绍和使用技巧可以参见lucifr的博客：<a href="http://lucifr.com/139225/sublime-text-2-tricks-and-tips/">Sublime Text 2 入门及技巧</a></p>
+
+<p>这里主要介绍linux下的使用。</p>
+
+<h3>1.终端调用：</h3>
+
+<p>若想在终端调用，可使用如下命令将sublime链接到/usr/bin中，便可直接调用:</p>
+
+<pre><code>sudo ln -s your_sublime_path/sublime_text /usr/bin/subl
+</code></pre>
+
+<p>若存在权限问题，则键入如下命令：</p>
+
+<pre><code>chmod +x /usr/bin/subl
+</code></pre>
+
+<p>终端键入 subl 即可调用啦，enjoy！</p>
+
+<p>运行 <code>subl --help</code> 可以查看 subl 命令的使用方法：</p>
+
+<pre><code>使用:  subl [参数] [文件]         编辑指定文件
+   或: subl [参数] [目录]            打开指定目录
+   或: subl [参数] -             编辑 stdin
+
+可用参数:
+  --project &lt;项目&gt;: 读取指定项目
+  --command &lt;命令&gt;: 运行指定命令
+  -n 或 --new-window:  打开新窗口
+  -a 或 --add:         向当前窗口中添加文件夹
+  -w 或 --wait:        等待文件关闭后再返回
+  -b 或 --background:  不激活程序窗口
+  -s 或 --stay:        关闭文件后保持程序窗口激活
+  -h 或 --help:        显示此帮助
+  -v 或 --version:     显示版本号
+
+读取 stdin 时会使用 --wait 参数。通过 --stay 可以在文件关闭后不返回终端（仅针对单个文件）。
+
+可以通过向文件名添加 `:行号` 或 `:行号:列号` 后缀来打开到更具体的位置。
+</code></pre>
+
+<p>如果发现出现Gtk-WARNING **: 无法在模块路径中找到主题引擎：“pixmap”？
+在终端下输入:</p>
+
+<pre><code>sudo apt-get install gtk2-engines-pixbuf
+</code></pre>
+
+<p>即可解决.</p>
+
+<h3>2.实用快捷键：</h3>
+
+<h4>打开/前往</h4>
+
+<pre><code>Ctrl+R                     前往method
+Ctrl+Shift+P               命令提示
+Ctrl+P                     前往文件
+Ctrl+`                     开关python控制台
+Ctrl+Shift+N               新建窗口
+Ctrl+N                     新建文件
+</code></pre>
+
+<h4>编辑</h4>
+
+<pre><code>Ctrl+L                     选择整行（按住-继续选择下行）
+Ctrl+D                     选词 （按住-继续选择下个相同的字符串）
+Ctrl+KK                    从光标处删除至行尾
+Ctrl+Shift+K               删除整行
+Ctrl+Shift+D               复制光标所在整行，插入在该行之后
+Ctrl+J                     合并行（已选择需要合并的多行时）
+Ctrl+KU                    改为大写
+Ctrl+KL                    改为小写
+Ctrl+M                     光标移动至括号内开始或结束的位置                        
+Ctrl+Shift+M               选择括号内的内容（按住-继续选择父括号）                 
+Ctrl+?                     注释整行
+Ctrl+Shift+?               注释已选择内容
+Ctrl+Space                 自动完成
+Ctrl+Z                     撤销
+Ctrl+Y                     恢复撤销
+Ctrl+Shift+V               粘贴并自动缩进
+Ctrl+M                     光标跳至对应的括号
+Ctrl+W                     闭合当前标签
+Ctrl+Shift+A               选择光标位置父标签对儿                                  
+Ctrl+Shift+[               折叠代码
+Ctrl+Shift+]               展开代码
+Ctrl+KT                    折叠属性 
+Ctrl+U                     软撤销
+Ctrl+T                     词互换
+Tab                        缩进
+Shift+Tab                  去除缩进
+Ctrl+Shift+UP              与上行互换
+Ctrl+Shift+DOWN            与下行互换
+Ctrl+K Backspace           从光标处删除至行首
+Ctrl+Enter                 插入行后
+Ctrl+Shift Enter           插入行前
+Ctrl+[                     缩进
+Ctrl+]                     去除缩进
+F9                         行排序（按a-z）
+</code></pre>
+
+<h4>查找/替换</h4>
+
+<pre><code>Ctrl+F                     当前页面查找
+Ctrl+Shift+F               全文搜索（替换）
+Ctrl+H                     替换
+Ctrl+Shift+H               替换下一个
+</code></pre>
+
+<h3>3.实用插件</h3>
+
+<pre><code>IndentGuides               自动缩进
+Sublime Alignment          行整理，美化
+Git                        在Sublime Text中使用git命令
+Case Conversion            大小写转换
+JS Format                  js格式转换
+Zen Coding                 强大的html生成插件
+Beautify Ruby              ruby格式转换
+SCSS                       scss代码高亮
+ERB                        快捷键入erb模板中的ruby代码引用符号
+Markdown Preview           在浏览器中预览markdown文件
+</code></pre>
+
+        
+        
+    </div>
+    <div class="meta">
+        <div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-29T00:13:00+08:00" pubdate data-updated="true">Mar 29<span>th</span>, 2012</time></div>
+        <div class="tags">
+
+<div class="cat">
+  
+    <a class='category' href='/blog/blog/categories/sublime-text/'>Sublime Text</a>, <a class='category' href='/blog/blog/categories/ubuntu/'>Ubuntu</a>
+  
+</div>
+
+</div>
+        
+    </div>
+</article>
 
 
     <article class="post">
