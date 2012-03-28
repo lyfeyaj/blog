@@ -69,9 +69,9 @@
 
 <h3>1.更新服务器到最新的系统</h3>
 
-<pre><code>apt-get
-updateapt-get
-dist-upgradedo-release-upgrade
+<pre><code>apt-getupdate
+apt-getdist-upgrade
+do-release-upgrade
 </code></pre>
 
 <p>较新的系统可以减少许多不必要的兼容性问题</p>
@@ -226,8 +226,9 @@ ruby: /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6
 
 <p>查看目前可以使用的 Ruby 版本, 其中 <code>[]</code> 内的部分可以省略。</p>
 
-<p>等待 Ruby 1.9.2 安装好以后, 我们可以通过 <code>rvm list</code> 命令来查看所有通过 rvm 安装的 ruby 版本。
-由于目前 rvm 安装的 ruby-1.9.3 还是有目录权限问题, 所以我们还需要运行：</p>
+<p>等待 Ruby 1.9.2 安装好以后, 我们可以通过 <code>rvm list</code> 命令来查看所有通过 rvm 安装的 ruby 版本。</p>
+
+<p>如果是root用户,由于目前 rvm 安装的 ruby-1.9.3 还是有目录权限问题, 所以我们还需要运行：</p>
 
 <pre><code>chown -R :rvm $rvm_path
 chmod -R g+w $rvm_path
