@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | LYFEYAJ]]></title>
   <link href="http://lyfeyaj.github.com/blog/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://lyfeyaj.github.com/blog/"/>
-  <updated>2012-03-29T01:05:13+08:00</updated>
+  <updated>2012-03-29T17:19:04+08:00</updated>
   <id>http://lyfeyaj.github.com/blog/</id>
   <author>
     <name><![CDATA[lyfeyaj]]></name>
@@ -26,6 +26,9 @@
 <li>这里的本地配置和服务器的配置主要区别在于rvm的安装，以及本地无需安装apache和passenger,其余一样.</li>
 <li>默认情况下，本地配置需要加入sudo获取root权限，服务器所有的命令都使用 root 用户运行, 如果不是 root 用户可以通过 <code>sudo su -</code> 切换到 root 用户进行安装。</li>
 </ul>
+
+
+<!-- more -->
 
 
 <h2>一. 基本环境安装</h2>
