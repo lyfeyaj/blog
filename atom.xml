@@ -4,7 +4,7 @@
   <title><![CDATA[LYFEYAJ]]></title>
   <link href="http://lyfeyaj.github.com/blog/atom.xml" rel="self"/>
   <link href="http://lyfeyaj.github.com/blog/"/>
-  <updated>2012-03-29T17:33:41+08:00</updated>
+  <updated>2012-03-31T09:32:31+08:00</updated>
   <id>http://lyfeyaj.github.com/blog/</id>
   <author>
     <name><![CDATA[lyfeyaj]]></name>
@@ -162,8 +162,8 @@ Markdown Preview           在浏览器中预览markdown文件
 
 <h3>1.更新服务器到最新的系统</h3>
 
-<pre><code>apt-getupdate
-apt-getdist-upgrade
+<pre><code>apt-get update
+apt-get dist-upgrade
 do-release-upgrade
 </code></pre>
 
